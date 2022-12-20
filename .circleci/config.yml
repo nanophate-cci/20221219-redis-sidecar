@@ -10,3 +10,9 @@ jobs:
       - run: redis-cli ping
       - run: redis-cli LPUSH mylist a b c d
       - run: redis-cli --csv LRANGE mylist 0 -1
+workflows:
+  version: 2
+  build_and_test:
+    jobs:
+      - build:
+          context: ssssssss
