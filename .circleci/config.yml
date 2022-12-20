@@ -3,6 +3,8 @@ jobs:
   build:
     docker:
       - image: cimg/openjdk:17.0.5
+        environment:
+          REDIS_HOST: 127.0.0.1
       - image: cimg/redis:6.2.6
         name: conac_redis
     steps:
