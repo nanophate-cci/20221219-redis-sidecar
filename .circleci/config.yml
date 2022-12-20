@@ -10,7 +10,6 @@ jobs:
     steps:
       - checkout
       - run: sudo apt-get update && sudo apt install -y redis-tools
-      - run: cat /etc/redis.conf
       - run: redis-cli ping
       - run: redis-cli LPUSH mylist a b c d
       - run: redis-cli --csv LRANGE mylist 0 -1
